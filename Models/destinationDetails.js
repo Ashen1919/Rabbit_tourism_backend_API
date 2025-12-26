@@ -31,17 +31,17 @@ const destinationDetailsSchema = new mongoose.Schema({
     destination_name: {
         type: String,
         required: true,
-        maxlength: [15, "Can't exceed 30 characters."] 
+        maxlength: [15, "Can't exceed 15 characters."] 
     },
     sub_description: {
         type: String,
         required: true,
-        maxlength: [25, "Can't exceed 30 characters."] 
+        maxlength: [25, "Can't exceed 25 characters."] 
     },
     description: {
         type: String,
         required: true,
-        maxlength: [40, "Can't exceed 30 characters."] 
+        maxlength: [40, "Can't exceed 40 characters."] 
     },
     locations: [locationSchema],
     time_to_visit: {
