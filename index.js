@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import { graphqlHTTP } from 'express-graphql';
 
 // create express app
 const app = express();
@@ -15,7 +16,7 @@ app.use(cors());
 dotenv.config();
 
 // get message
-app.get('/', (res) => {
+app.get('/', (req,res) => {
     res.send("Server is running");
 });
 
