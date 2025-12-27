@@ -48,10 +48,30 @@ const notIncludesSchema = new mongoose.Schema({
 });
 
 const tourDetailsSchema = new mongoose.Schema({
+    tour_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Tour",
+        required: true
+    },
+    tour_name: {
+        type: String,
+        required: true,
+        maxlength: [30, "Can't exceed 30 characters."] 
+    },
     tour_location: {
         type: String,
         required: true,
         maxlength: [20, "Can't exceed 20 characters."]
+    },
+    total_days: {
+        type: Number,
+        required: true,
+        min: 1,
+        max: 50
+    },
+    tour_image: {
+        type: String,
+        required: true
     },
     tour_sub_description: {
         type: String,
