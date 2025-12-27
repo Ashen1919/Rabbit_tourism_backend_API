@@ -3,7 +3,6 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import { graphqlHTTP } from 'express-graphql';
 
 // create express app
 const app = express();
