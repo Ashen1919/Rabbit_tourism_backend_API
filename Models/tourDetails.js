@@ -102,6 +102,10 @@ const tourDetailsSchema = new mongoose.Schema({
         required: true,
         min: 1
     },
+    destination_name: {
+        type: String,
+        required: true
+    }
 }, {timestamps: true});
 
 const TourDetails = mongoose.model("TourDetails", tourDetailsSchema);
