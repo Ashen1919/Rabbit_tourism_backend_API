@@ -4,7 +4,7 @@ const destinationSchema = new mongoose.Schema({
     destination_name: {
         type: String,
         required: true,
-        maxlength: [15, "Can't exceed 15 characters."] 
+        maxlength: [30, "Can't exceed 30 characters."] 
     },
     destination_label: {
         type: String,
@@ -18,7 +18,7 @@ const destinationSchema = new mongoose.Schema({
     destination_description: {
         type: String,
         required: true,
-        maxlength: [30, "Can't exceed 30 characters."] 
+        maxlength: [60, "Can't exceed 60 characters."] 
     },
 }, {timestamps: true});
 
